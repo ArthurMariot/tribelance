@@ -1,1 +1,18 @@
-// Specific CSS for your home-page
+body {
+  background-color: blue;
+}// Specific CSS for your home-page
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+h1 {
+  position: absolute;
+  width: 991px;
+  height: 200px;
+  left: 143px;
+  top: 199px;
+  color: white;
+}
