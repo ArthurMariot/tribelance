@@ -1,1 +1,6 @@
-index.html.erb
+<% @missions.each do |mission| %>
+<%= mission.title %> <br>
+<%= mission.company %> <br>
+<%= mission.description %> <br>
+<br>
+<% end %>
