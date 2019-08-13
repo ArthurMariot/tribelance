@@ -1,4 +1,26 @@
 <div class="container">
+<<<<<<< HEAD
+
+<div class="missions">
+  <% @missions.each do |mission| %>
+  <div class="card-mission">
+
+    <div class="card-mission-img">
+      <img src= "<%= mission.logo %>" alt="" class="logo-sm">
+    </div>
+    <div class="card-mission-title">
+      <h4> <%= mission.title %> </h4>
+    </div>
+    <div class="card-mission-info">
+      <p> <%= mission.daily_price %> $ </p>
+      <p> <%= mission.num_of_days %> days </p>
+    </div>
+  </div>
+  <% end %>
+
+</div>
+
+=======
     <div class="missions">
         <% @missions.each do |mission| %>
         <div class="card-mission">
@@ -17,3 +39,4 @@
         </div>
         <% end %>
     </div>
+>>>>>>> ef446e019f7240d339741b2f6e9b3c6be328ab20
