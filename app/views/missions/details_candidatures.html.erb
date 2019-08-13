@@ -1,0 +1,11 @@
+<br>
+<br><br><br><br>
+
+test
+<% @candidatures.each do |candidature|  %>
+<%= candidature.cover_letter %>
+<%= candidature.daily_price %> € / days for a total price
+<%= candidature.total_price %> € for
+<%= candidature.num_of_days %> days
+<br>
+<% end  %>
