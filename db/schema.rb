@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_13_183030) do
+ActiveRecord::Schema.define(version: 2019_08_13_183031) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,8 +20,8 @@ ActiveRecord::Schema.define(version: 2019_08_13_183030) do
     t.bigint "user_id"
     t.bigint "mission_id"
     t.string "cover_letter"
-    t.integer "end"
-    t.integer "start"
+    t.date "start_date"
+    t.date "end_date"
     t.integer "total_price"
     t.integer "daily_price"
     t.integer "num_of_days"
