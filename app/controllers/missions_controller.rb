@@ -1,14 +1,20 @@
 class MissionsController < ApplicationController
+  before_action :set_missions, only: [:show, :edit, :update, :destroy, :details_candidatures]
+
   def index
-    @missions = Mission.all
+    @missions = policy_scope(Mission).order(created_at: :desc)
   end
 
   def new
     @mission = Mission.new
+
+    authorize @mission
   end
 
   def create
     @mission = Mission.new(mission_params)
+    @mission.user = current_user
+    authorize @mission
     if @mission.save
       redirect_to mission_path(@mission)
     else
@@ -17,22 +23,28 @@ class MissionsController < ApplicationController
   end
 
   def show
-    @mission = Mission.find(params[:id])
+    authorize @mission
+    # @mission = Mission.find(params[:id])
   end
 
   def edit
-    @mission = Mission.find(params[:id])
+    # @mission = Mission.find(params[:id])
   end
 
   def update
-    @mission = Mission.find(params[:id])
+    # @mission = Mission.find(params[:id])
     redirect_to mission_path(@mission)
   end
 
   def destroy
-    @mission = Mission.find(params[:id])
+    # @mission = Mission.find(params[:id])
     @mission.destroy
     redirect_to missions_path
+  end
+
+  def details_candidatures
+    authorize @mission
+    @candidatures = @mission.candidatures
   end
 
   private
@@ -41,5 +53,9 @@ class MissionsController < ApplicationController
     # *Strong params*: You need to *whitelist* what can be updated by the user
     # Never trust user data!
     params.require(:mission).permit(:description, :logo, :company, :headquarter, :num_of_days, :daily_price, :user_id, :title)
+  end
+
+  def set_missions
+    @mission = Mission.find(params[:id])
   end
 end
