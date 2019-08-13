@@ -35,7 +35,7 @@ missions_attributes = [
     headquarter: "Seattle",
     num_of_days:  150,
     daily_price: 600,
-    user_id: 1,
+    user: kim_mullaney,
   },
   {
     company: "Zapier",
@@ -45,7 +45,7 @@ missions_attributes = [
     headquarter: "Seattle",
     num_of_days: 60,
     daily_price: 700,
-    user_id: 1,
+    user: kim_mullaney,
   },
   {
     company: "Trello",
@@ -55,7 +55,7 @@ missions_attributes = [
     headquarter: "Amsterdam",
     num_of_days: 30,
     daily_price: 400,
-    user_id: 2,
+    user: keisha_washington,
   },
   {
     company: "Trello",
@@ -65,7 +65,7 @@ missions_attributes = [
     headquarter: "New York",
     num_of_days: 90,
     daily_price: 700,
-    user_id: 2,
+    user: keisha_washington,
   },
   {
     company: "Zoom",
@@ -75,7 +75,7 @@ missions_attributes = [
     headquarter: "San Jose",
     num_of_days: 130,
     daily_price: 420,
-    user_id: 3,
+    user: lynne_oldham,
   },
   {
     company: "Mozilla",
@@ -85,7 +85,7 @@ missions_attributes = [
     headquarter: "Portland",
     num_of_days: 130,
     daily_price: 420,
-    user_id: 4,
+    user: christine_tran,
   },
   {
     company: "Mozilla",
@@ -95,7 +95,7 @@ missions_attributes = [
     headquarter: "Portland",
     num_of_days: 60,
     daily_price: 600,
-    user_id: 4,
+    user: christine_tran,
   }
 ]
 Mission.create!(missions_attributes)
