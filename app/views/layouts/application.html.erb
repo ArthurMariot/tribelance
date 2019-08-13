@@ -11,17 +11,24 @@
   </head>
   <body>
 
-   <p class="notice"><%= notice %></p>
-   <p class="alert"><%= alert %></p>
     <% if params["action"] == "home" && params["controller"] == "pages" %>
-      <%= render 'shared/navbar-home' %>
+     <%= render 'shared/navbar-home' %>
+   <% else %>
+     <%= render 'shared/navbar' %>
+   <% end %>
+
+    <% if params["action"] == "home" && params["controller"] == "pages" %>
+     <%= render 'shared/footer-home' %>
     <% else %>
       <%= render 'shared/navbar' %>
-    <% end %>
+    <% end %>>
+
     <%= yield %>
-    <%= render 'shared/footer' %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
-    
+
   </body>
 </html>
