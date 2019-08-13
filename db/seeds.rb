@@ -12,10 +12,10 @@ User.destroy_all
 
 puts 'Creating users...'
 
-kim_mullaney = User.create!(email: "kim.mullaney@zapier.co", password: "kimmullaney")
-keisha_washington = User.create!(email: "keisha.ashington@trello.co", password: "keishawashington")
-lynne_oldham = User.create!(email: "lynne_oldham@zoom.co", password: "lynneoldham")
-christine_tran = User.create!(email: "christine_tran@mozilla.co", password: "christinetran")
+kim_mullaney = User.create!(email: "kim.mullaney@zapier.co", password: "kimmullaney", first_name: "Kim", last_name: "Mullaney")
+keisha_washington = User.create!(email: "keisha.ashington@trello.co", password: "keishawashington", first_name: "Keisha", last_name: "Ashington")
+lynne_oldham = User.create!(email: "lynne_oldham@zoom.co", password: "lynneoldham", first_name: "Lynne", last_name: "oldham")
+christine_tran = User.create!(email: "christine_tran@mozilla.co", password: "christinetran", first_name: "Christine", last_name: "Tran")
 
 puts 'Finished users!'
 puts User.all
@@ -35,7 +35,7 @@ missions_attributes = [
     headquarter: "Seattle",
     num_of_days:  150,
     daily_price: 600,
-    user_id: 1,
+    user: kim_mullaney,
   },
   {
     company: "Zapier",
@@ -45,7 +45,7 @@ missions_attributes = [
     headquarter: "Seattle",
     num_of_days: 60,
     daily_price: 700,
-    user_id: 1,
+    user: kim_mullaney,
   },
   {
     company: "Trello",
@@ -55,7 +55,7 @@ missions_attributes = [
     headquarter: "Amsterdam",
     num_of_days: 30,
     daily_price: 400,
-    user_id: 2,
+    user: keisha_washington,
   },
   {
     company: "Trello",
@@ -65,7 +65,7 @@ missions_attributes = [
     headquarter: "New York",
     num_of_days: 90,
     daily_price: 700,
-    user_id: 2,
+    user: keisha_washington,
   },
   {
     company: "Zoom",
@@ -75,7 +75,7 @@ missions_attributes = [
     headquarter: "San Jose",
     num_of_days: 130,
     daily_price: 420,
-    user_id: 3,
+    user: lynne_oldham,
   },
   {
     company: "Mozilla",
@@ -85,18 +85,58 @@ missions_attributes = [
     headquarter: "Portland",
     num_of_days: 130,
     daily_price: 420,
-    user_id: 4,
+    user: christine_tran,
   },
   {
     company: "Mozilla",
     logo: "https://upload.wikimedia.org/wikipedia/commons/d/d2/Firefox_Logo%2C_2017.png",
-    title: "Content Marketing Managerr",
+    title: "Content Marketing Manager",
     description: "The Firefox Content Manager will collaborate with product marketing and a number of cross functional marketing teams to develop engaging content that sets Firefox apart from other tech brands. This creator will glean key insights from popular culture and align them with Firefox’s brand personality, commitment to people’s privacy and product offerings and develop irresistible videos, blog posts, and other content programs. Based in the San Francisco Bay Area or Portland, this role reports to the Head of Social and Brand Experiences.",
     headquarter: "Portland",
     num_of_days: 60,
     daily_price: 600,
-    user_id: 4,
-  }
+    user: christine_tran,
+  },
+  {
+    company: "Shopify",
+    logo: "https://upload.wikimedia.org/wikipedia/fr/thumb/e/e7/Shopify_logo.svg/1280px-Shopify_logo.svg.png",
+    title: "Business Insights Analyst",
+    description: "Owning the delivery of business insights across the organization, making recommendations and implementing improvements to current business practices. Exploring merchant and product data to uncover key insights to drive decisions on pricing, positioning, and planning decisions.",
+    headquarter: "Waterloo",
+    num_of_days: 20,
+    daily_price: 550,
+    user: christine_tran,
+  },
+  {
+    company: "Shopify",
+    logo: "https://upload.wikimedia.org/wikipedia/fr/thumb/e/e7/Shopify_logo.svg/1280px-Shopify_logo.svg.png",
+    title: "French Content Marketer",
+    description: "We’re looking for a highly motivated French speaking content marketer who is passionate about entrepreneurship, ecommerce, and digital marketing. Your task will be to localize and create compelling content that helps our French speaking merchants build, launch, and grow successful businesses with Oberlo and Shopify.",
+    headquarter: "Berlin",
+    num_of_days: 60,
+    daily_price: 600,
+    user: christine_tran,
+  },
+  {
+    company: "Heroku",
+    logo: "https://www.stickpng.com/assets/images/58480873cef1014c0b5e48ea.png",
+    title: "Site Reliability Engineer",
+    description: "We’re looking for people who are interested in complex distributed systems- how they work, how they can work better, how we even know if they’re working at all. We need someone who's spent time working as a developer (writing code with a team to fix operational issues or build features), but who has also spent time on operational concerns (investigating production incidents, creating or updating monitoring and alerting plans for production systems, or investigating performance issues, for instance).",
+    headquarter: "San Francisco ",
+    num_of_days: 35,
+    daily_price: 380,
+    user: christine_tran,
+  },
+  {
+    company: "Heroku",
+    logo: "https://www.stickpng.com/assets/images/58480873cef1014c0b5e48ea.png",
+    title: "Cloud Platform Support",
+    description: "Heroku takes an engineering-driven approach to support. Our team of support engineers intimately understand cloud application architecture and common issues. If you're a software engineer passionate about web apps, related open source projects, and problem solving, we'd love to hear from you.",
+    headquarter: "San Francisco ",
+    num_of_days: 25,
+    daily_price: 300,
+    user: christine_tran,
+  },
 ]
 Mission.create!(missions_attributes)
 

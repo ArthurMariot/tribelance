@@ -19,10 +19,11 @@
   font-weight: lighter;
 }
 
-.nav-center a {
+.nav-center-home a {
   float: left;
   text-align: center;
   padding: 10px 32px;
+  color: white
 }
 
 a {
@@ -30,11 +31,11 @@ a {
 }
 
 a:hover {
-  color: yellow;
+  opacity: 0.6;
   text-decoration: none;
 }
 
 .btn-white:hover {
-  color: yellow;
-  border: 1px solid yellow;
+  opacity: 0.6;
+  border: 1px solid blue;
 }

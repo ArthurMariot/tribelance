@@ -1,2 +1,17 @@
-
-
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+    <a class="navbar-brand" href="#">
+        <%= image_tag "logo-color.png" %>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <div class="nav-center">
+                <a href="<%= missions_path %>">Find a mission</a>
+                <a href="<%= new_user_registration_path %>">Find a freelance</a>
+                <a class="btn-blue" href="<%= new_user_session_path %>">Login</a>
+            </div>
+        </ul>
+    </div>
+</div>
