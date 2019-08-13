@@ -8,7 +8,7 @@
       <img src= "<%= mission.logo %>" alt="" class="logo-sm">
     </div>
     <div class="card-mission-title">
-      <h4> <%= mission.title %> </h4>
+      <h4> <%= link_to mission.title, mission_path(mission) %> </h4>
     </div>
     <div class="card-mission-info">
       <p> <%= mission.daily_price %> $ </p>
