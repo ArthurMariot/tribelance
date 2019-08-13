@@ -1,6 +1,11 @@
+// Specific CSS for your home-page
 body {
   background-color: blue;
-}// Specific CSS for your home-page
+}
+
+.navbar-lewagon {
+  color: white
+}
 
 .footer {
   position: absolute;
@@ -15,4 +20,6 @@ h1 {
   left: 143px;
   top: 199px;
   color: white;
+  text-shadow: 1px 2px yellow;
+  font-size: 54px;
 }
