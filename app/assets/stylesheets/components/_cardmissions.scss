@@ -8,17 +8,16 @@
 
 .card-mission {
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
     box-sizing: border-box;
     text-align: center;
-    justify-content: center;
     border: 2px solid #a9d2f9;
     border-radius: 6px;
     background-color: #fff;
     min-height: 168px;
     padding: 24px 18px;
   }
-
 
 .card-mission-img {
   margin-bottom: 24px;
@@ -32,15 +31,23 @@
   display: inline;
 }
 
+h4 {
+  color: #1de3cf;
+  font-size: 18px;
+}
+
+
 .card-mission-info {
   display: flex;
   justify-content: space-between;
-  padding: 12px 12px;
+  padding: 28px 12px 0 28px;
 }
 
 .card-mission-info p {
   margin-bottom: 0;
 }
+
+
 
 
 
