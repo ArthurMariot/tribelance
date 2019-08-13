@@ -10,6 +10,10 @@ class CandidaturesController < ApplicationController
     @candidature = Candidature.new(candidature_params)
     @candidature.mission = @mission
     @candidature.user = current_user
+    @candidature.save
+    @candidature.daily_price = @mission.daily_price
+    @candidature.num_of_days = (@candidature.end_date - @candidature.start_date).to_i
+    @candidature.total_price = @candidature.num_of_days * @candidature.mission.daily_price
     authorize @mission
     if @candidature.save
       redirect_to missions_path
@@ -19,6 +23,12 @@ class CandidaturesController < ApplicationController
   end
 
   private
+
+  # def price_calculation
+  #   duration = params[:end_date] - params[:start_date]
+  #   total = duration * @mission.daily_price
+  #   total
+  # end
 
   def candidature_params
     # *Strong params*: You need to *whitelist* what can be updated by the user
