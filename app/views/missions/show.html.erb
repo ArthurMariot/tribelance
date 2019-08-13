@@ -1,5 +1,17 @@
+<div class="container">
 
-<%= @mission.title %> <br>
-<%= @mission.company %> <br>
-<%= @mission.description %> <br>
+<div class="card-mission-show">
 
+  <div class="card-mission-show-logo">
+    <img src=" <%= @mission.logo %> " alt="", class="logo-lg">
+  </div>
+
+  <div class="card-mission-show-details">
+    <h2> <%= @mission.title %> </h2>
+    <%= @mission.description %>
+  </div>
+<br>
+  <%= link_to "Apply", new_mission_candidature_path(@mission), class: "btn-blue"  %>
+</div>
+
+</div>
