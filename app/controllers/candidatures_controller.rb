@@ -20,6 +20,6 @@ class CandidaturesController < ApplicationController
   def candidature_params
     # *Strong params*: You need to *whitelist* what can be updated by the user
     # Never trust user data!
-    params.require(:candidature).permit(:cover_letter, :end, :start, :num_of_days, :daily_price, :user_id)
+    params.require(:candidature).permit(:cover_letter, :end_date, :start_date, :num_of_days, :daily_price, :user_id)
   end
 end
