@@ -1,30 +1,30 @@
 <div class="form-blue">
-    <h2>Create a mission</h2>
-    <%= simple_form_for(@mission) do |f| %>
+  <h2>Create a mission</h2>
+  <%= simple_form_for(@mission) do |f| %>
+
     <% if @mission.errors.any? %>
-    <div class="errors-container">
+      <div class="errors-container">
         <ul>
-            <% @mission.errors.full_messages.each do |message| %>
-            <li>
-                <%= message %>
-            </li>
-            <% end %>
+          <% @mission.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
         </ul>
-    </div>
+      </div>
     <% end %>
+
     <div class="form-inputs">
-        <%= f.input :title %>
-        <%= f.input :user_id %>
-        <!-- a modifier avec le current user en attente de pundit -->
-        <%= f.input :company %>
-        <%= f.input :description %>
-        <%= f.input :headquarter %>
-        <%= f.input :logo %>
-        <%= f.input :num_of_days, label:"How many days?" %>
-        <%= f.input :daily_price, label:"Price per day" %>
+      <%= f.input :title %>
+      <%= f.input :user_id %>      <!-- a modifier avec le current user en attente de pundit -->
+      <%= f.input :company %>
+      <%= f.input :description %>
+      <%= f.input :headquarter %>
+      <%= f.input :logo %>
+      <%= f.input :num_of_days, label:"How many days?" %>
+      <%= f.input :daily_price, label:"Price per day" %>
     </div>
+
     <div class="form-actions">
-        <%= f.button :submit, value: "Let's go ! %>
+      <%= f.button :submit, value: "Let's go ! %>
     </div>
-    <% end %>
+  <% end %>
 </div>
