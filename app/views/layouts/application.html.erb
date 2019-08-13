@@ -20,8 +20,8 @@
     <% if params["action"] == "home" && params["controller"] == "pages" %>
      <%= render 'shared/footer-home' %>
     <% else %>
-     <%= render 'shared/navbar' %>
-    <% end %>
+      <%= render 'shared/navbar' %>
+    <% end %>>
 
     <%= yield %>
     <p class="notice"><%= notice %></p>
