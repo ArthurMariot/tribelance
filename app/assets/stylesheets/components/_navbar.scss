@@ -1,0 +1,41 @@
+.navbar-lewagon {
+  justify-content: space-between;
+  background: transparent;
+  color: blue;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 120px;
+}
+
+.btn-blue {
+  color: blue;
+  border: 1px solid blue;
+  padding: 8px 28px;
+  border-radius: 50px;
+  font-weight: lighter;
+}
+
+.nav-center a {
+  float: left;
+  text-align: center;
+  padding: 10px 32px;
+}
+
+a {
+  color: blue;
+}
+
+a:hover {
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+.btn-blue:hover {
+  opacity: 0.6;
+  border: 1px solid blue;
+}

@@ -1,18 +1,20 @@
-
 <div class="container">
 
 <div class="missions">
   <% @missions.each do |mission| %>
   <div class="card-mission">
+
     <div class="card-mission-img">
       <img src= "<%= mission.logo %>" alt="" class="logo-sm">
     </div>
-    <h3> <%= mission.title  %> </h3>
+    <div class="card-mission-title">
+      <h4> <%= link_to mission.title, mission_path(mission) %> </h4>
+    </div>
     <div class="card-mission-info">
       <p> <%= mission.daily_price %> $ </p>
-      <p> <%= mission.num_of_days %> jours </p>
+      <p> <%= mission.num_of_days %> days </p>
     </div>
   </div>
   <% end %>
-</div>
 
+</div>
