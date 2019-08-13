@@ -1,4 +1,4 @@
-<%= simple_form_for(@mission, @candidature) do |f| %>
+<%= simple_form_for [@mission, @candidature] do |f| %>
 
   <% if @candidature.errors.any? %>
     <div class="errors-container">
@@ -12,13 +12,11 @@
 
 
     <div class="form-inputs">
-    <%= f.input :mission_id %>
     <%= f.input :user_id %>      <!-- a modifier avec le current user en attente de pundit -->
     <%= f.input :cover_letter %>
-    <%= f.input :end %>
     <%= f.input :start %>
-    <%= f.input :num_of_days %>
-    <%= f.input :daily_price %>
+    <%= f.input :end %>
+   <%= @mission.daily_price %> per day
   </div>
 
   <div class="form-actions">
