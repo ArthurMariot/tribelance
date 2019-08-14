@@ -5,7 +5,7 @@
   <% @candidatures.each do |candidature|  %>
 
     <div class="notification">
-      <%= cl_image_tag @candidature.user.avatar, class: "avatar-large" %>
+      <%= cl_image_tag candidature.user.avatar, class: "avatar-large" %>
 
       <div class="notification-content">
         <p> <strong> Mission: <%= @mission.title %> </strong> </p>
