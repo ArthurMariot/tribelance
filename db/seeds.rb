@@ -16,10 +16,13 @@ User.destroy_all
 
 puts 'Creating users...'
 
+
+louis_uguen = User.create!(email: "louis@wagon.org", password: "password", first_name: "Louis", last_name: "Uguen", remote_avatar_url: "https://dwj199mwkel52.cloudfront.net/assets/lewagon-logo-square-fe76916e1b923ade71e253ae6dc031d936e5e8eebac4e26b0fbac650ea6ee360.png")
 kim_mullaney = User.create!(email: "kim.mullaney@zapier.co", password: "kimmullaney", first_name: "Kim", last_name: "Mullaney")
 keisha_washington = User.create!(email: "keisha.ashington@trello.co", password: "keishawashington", first_name: "Keisha", last_name: "Ashington")
 lynne_oldham = User.create!(email: "lynne_oldham@zoom.co", password: "lynneoldham", first_name: "Lynne", last_name: "oldham")
 christine_tran = User.create!(email: "christine_tran@mozilla.co", password: "christinetran", first_name: "Christine", last_name: "Tran")
+edouard_uguen = User.create!(email: "edouard@mozilla.co", password: "christinetran", first_name: "Christine", last_name: "Tran")
 
 puts 'Finished users!'
 puts User.all
@@ -38,7 +41,6 @@ missions_attributes = [
     num_of_days:  150,
     daily_price: 600,
     user: kim_mullaney,
-
   },
   {
     company: "Zapier",
@@ -151,64 +153,44 @@ missions_attributes = [
     user: christine_tran,
   },
     {
-    company: "Heroku",
-    remote_photo_url: "https://www.stickpng.com/assets/images/58480873cef1014c0b5e48ea.png",
-    title: "Cloud Platform Support",
-    description: "Heroku takes an engineering-driven approach to support. Our team of support engineers intimately understand cloud application architecture and common issues. If you're a software engineer passionate about web apps, related open source projects, and problem solving, we'd love to hear from you.",
-    headquarter: "San Francisco ",
-    num_of_days: 25,
-    daily_price: 300,
-    user: christine_tran,
+    company: "Le Wagon",
+    remote_photo_url: "https://www.frenchtechbordeaux.com/wp-content/uploads/2019/01/le-wagon-color.png",
+    title: "Student Success Manager",
+    description: "Working closely with the UK Manager and Marketing Lead, the role will consist of building hiring partnerships, managing inbound calls & applications, hiring-specific events and more. Most importantly, the successful candidate will help support on an exciting new part-time bootcamp offering soon to be launched in London!",
+    headquarter: "Bordeaux",
+    num_of_days: 76,
+    daily_price: 400,
+    user: louis_uguen,
   },
     {
-    company: "Heroku",
-    remote_photo_url: "https://www.stickpng.com/assets/images/58480873cef1014c0b5e48ea.png",
-    title: "Cloud Platform Support",
-    description: "Heroku takes an engineering-driven approach to support. Our team of support engineers intimately understand cloud application architecture and common issues. If you're a software engineer passionate about web apps, related open source projects, and problem solving, we'd love to hear from you.",
-    headquarter: "San Francisco ",
-    num_of_days: 25,
-    daily_price: 300,
-    user: christine_tran,
+    company: "Le Wagon",
+    remote_photo_url: "https://www.frenchtechbordeaux.com/wp-content/uploads/2019/01/le-wagon-color.png",
+    title: "Alumni Community Manager",
+    description: "We're looking for someone to join the growth team at Le Wagon to engage and support the growing alumni community, a new function at a revolutionary new education company. In this role you’ll be instrumental in mapping out the investments, technologies, and key activities needed to help us grow our alumni community while maintaining engagement with current members. You will be focused on engaging and growing the alumni community through in-person and digital user groups, online engagement and identifying key opportunities to make the Lambda School alumni network best-in-class.",
+    headquarter: "Bordeaux",
+    num_of_days: 200,
+    daily_price: 700,
+    user: louis_uguen,
   },
     {
-    company: "Heroku",
-    remote_photo_url: "https://www.stickpng.com/assets/images/58480873cef1014c0b5e48ea.png",
-    title: "Cloud Platform Support",
-    description: "Heroku takes an engineering-driven approach to support. Our team of support engineers intimately understand cloud application architecture and common issues. If you're a software engineer passionate about web apps, related open source projects, and problem solving, we'd love to hear from you.",
-    headquarter: "San Francisco ",
-    num_of_days: 25,
-    daily_price: 300,
-    user: christine_tran,
+    company: "Le Wagon",
+    remote_photo_url: "https://www.frenchtechbordeaux.com/wp-content/uploads/2019/01/le-wagon-color.png",
+    title: "Business Developer",
+    description: "Le Wagon is looking for a Business Developer to play a leading role in creating and executing first-of-its kind partnerships to grow our major goals around continuing to improve student outcomes and enhance the student experience. You will be spearheading major initiatives that will be at the forefront of driving Lambda’s mission and rapid growth..",
+    headquarter: "Bordeaux",
+    num_of_days: 90,
+    daily_price: 500,
+    user: louis_uguen,
   },
     {
-    company: "Heroku",
-    remote_photo_url: "https://www.stickpng.com/assets/images/58480873cef1014c0b5e48ea.png",
-    title: "Cloud Platform Support",
-    description: "Heroku takes an engineering-driven approach to support. Our team of support engineers intimately understand cloud application architecture and common issues. If you're a software engineer passionate about web apps, related open source projects, and problem solving, we'd love to hear from you.",
-    headquarter: "San Francisco ",
-    num_of_days: 25,
-    daily_price: 300,
-    user: christine_tran,
-  },
-    {
-    company: "Heroku",
-    remote_photo_url: "https://www.stickpng.com/assets/images/58480873cef1014c0b5e48ea.png",
-    title: "Cloud Platform Support",
-    description: "Heroku takes an engineering-driven approach to support. Our team of support engineers intimately understand cloud application architecture and common issues. If you're a software engineer passionate about web apps, related open source projects, and problem solving, we'd love to hear from you.",
-    headquarter: "San Francisco ",
-    num_of_days: 25,
-    daily_price: 300,
-    user: christine_tran,
-  },
-    {
-    company: "Heroku",
-    remote_photo_url: "https://www.stickpng.com/assets/images/58480873cef1014c0b5e48ea.png",
-    title: "Cloud Platform Support",
-    description: "Heroku takes an engineering-driven approach to support. Our team of support engineers intimately understand cloud application architecture and common issues. If you're a software engineer passionate about web apps, related open source projects, and problem solving, we'd love to hear from you.",
-    headquarter: "San Francisco ",
-    num_of_days: 25,
-    daily_price: 300,
-    user: christine_tran,
+    company: "Le Wagon",
+    remote_photo_url: "https://www.frenchtechbordeaux.com/wp-content/uploads/2019/01/le-wagon-color.png",
+    title: "Lead Teacher",
+    description: "This is a highly visible, student-facing role on the Instruction team, reporting directly to the Web Development Program Director. As the Web Development Instructor, you’ll be responsible for delivering the curriculum to students, tracking student progress, and preparing students for the job market. Additionally, you’ll be expected to actively contribute to and improve upon the existing curriculum in conjunction with the Program Manager.",
+    headquarter: "Bordeaux",
+    num_of_days: 90,
+    daily_price: 500,
+    user: louis_uguen,
   },
     {
     company: "Heroku",
@@ -221,6 +203,7 @@ missions_attributes = [
     user: christine_tran,
   },
 ]
+
 Mission.create!(missions_attributes)
 
 

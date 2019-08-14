@@ -2,7 +2,7 @@
   <div class="container">
     <div class="missions">
       <% @missions.each do |mission| %>
-        <a href= "<%= mission_path(mission)%>" class="box">
+      <a href= "<%= mission_path(mission)%>" class="box">
 
         <div class="card-mission">
 
@@ -18,8 +18,9 @@
           </div>
         </div>
 
-        </a>
+      </a>
       <% end %>
     </div>
+
   </div>
 

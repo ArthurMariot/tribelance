@@ -5,6 +5,12 @@ class CandidaturesController < ApplicationController
     authorize @candidature
   end
 
+  def dashboard
+    skip_authorization
+    @candidatures = policy_scope(Candidature).where(user: current_user).order(created_at: :desc)
+    # raise
+  end
+
   def create
     @mission = Mission.find(params[:mission_id])
     @candidature = Candidature.new(candidature_params)
