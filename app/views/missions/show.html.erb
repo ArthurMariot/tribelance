@@ -32,8 +32,10 @@
       </div>
 
     <div class="card-show-gauche">
+      <h3>About the mission:</h3>
       <p> Price: <%= @mission.daily_price %> $/day</p>
       <p> Number of days: <%= @mission.num_of_days %> </p>
+      <p> Headquarter location: <%= @mission.headquarter %> </p>
       <p> Recruiter name: <%= @mission.user.first_name %> <%= @mission.user.last_name %> </p>
     </div>
     <%= link_to "Apply", new_mission_candidature_path(@mission), class: "btn-blue" %>
