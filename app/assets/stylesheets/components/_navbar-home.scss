@@ -26,6 +26,15 @@
   color: white
 }
 
+.nav-center-home .dropdown-menu a {
+  color: blue;
+}
+
+.nav-center-home .dropdown-menu {
+  margin-right: 10px;
+  border: 1px solid #ff487e;
+}
+
 a {
   color: white;
 }
@@ -38,4 +47,8 @@ a:hover {
 .btn-white:hover {
   opacity: 0.6;
   border: 1px solid blue;
+}
+
+.dropdown-item a {
+  color: black;
 }
