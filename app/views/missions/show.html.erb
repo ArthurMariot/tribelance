@@ -3,7 +3,7 @@
       <div class="card-show">
 
         <div class="card-mission-img">
-          <img src= "<%= @mission.logo %>" alt="" class="logo-lg">
+          <%= cl_image_tag @mission.photo, class: "logo-lg" %>
         </div>
         <div class="card-mission-title-description">
           <h2> <%= @mission.title %> </h2>

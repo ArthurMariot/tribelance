@@ -1,11 +1,21 @@
-<br>
-<br><br><br><br>
+<h2>@mission.title</h2>
 
-test
-<% @candidatures.each do |candidature|  %>
-<%= candidature.cover_letter %>
-<%= candidature.daily_price %> € / days for a total price
-<%= candidature.total_price %> € for
-<%= candidature.num_of_days %> days
-<br>
-<% end  %>
+<div class="candidatures">
+  <% @candidatures.each do |candidature|  %>
+
+    <div class="notification">
+      <%= cl_image_tag @current_user.avatar, class: "avatar-large" %>
+      <img src=' <%= candidature.user.photo %>' class="avatar-large" />
+      <div class="notification-content">
+        <p> <strong> Mission: <%= @mission.title %> </strong> </p>
+        <p> Applicant: <%= candidature.user.first_name %> <%= candidature.user.last_name %> </p>
+        <p> <small> <%= candidature.cover_letter.truncate(40, separator: /\s/) %> </small></p>
+      </div>
+
+      <div class="notification-actions">
+        <a href="#" class="btn btn-success">Validate</a>
+        <a href="#" class="btn btn-danger">Decline</a>
+      </div>
+    </div>
+  <% end %>
+</div>
