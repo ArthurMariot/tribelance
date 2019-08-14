@@ -7,6 +7,11 @@ class MissionsController < ApplicationController
     @missions = policy_scope(Mission).order(created_at: :desc)
   end
 
+  def dashboard
+    skip_authorization
+    @missions = policy_scope(Mission).where(user: current_user).order(created_at: :desc)
+  end
+
   def new
     @mission = Mission.new
     authorize @mission
@@ -17,7 +22,7 @@ class MissionsController < ApplicationController
     @mission.user = current_user
     authorize @mission
     if @mission.save
-      redirect_to mission_path(@mission)
+      redirect_to dashboard_path
     else
       render :new
     end
@@ -41,6 +46,11 @@ class MissionsController < ApplicationController
     # @mission = Mission.find(params[:id])
     @mission.destroy
     redirect_to missions_path
+  end
+
+  def details_candidatures
+    authorize @mission
+    @candidatures = @mission.candidatures
   end
 
   def details_candidatures
