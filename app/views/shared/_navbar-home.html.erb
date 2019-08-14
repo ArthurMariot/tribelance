@@ -10,7 +10,15 @@
             <div class="nav-center-home">
                 <a href="<%= missions_path %>">Find a mission</a>
                 <a href="<%= new_mission_path %>">Find a freelance</a>
-                <a class= "btn-white" href="<%= new_user_session_path %>">Login</a>
+                <% if current_user.nil? %>
+                  <a class= "btn-white" href="<%= new_user_session_path %>">Login</a>
+                <% else %>
+                  <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="<%= current_user.avatar %>" />
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="">My missions</a>
+                  <a class="dropdown-item" href="<%= destroy_user_session_path %>">Logout</a>
+        </div>
+                <% end %>
             </div>
         </ul>
     </div>
