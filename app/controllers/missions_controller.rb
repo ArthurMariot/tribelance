@@ -1,13 +1,14 @@
 class MissionsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_missions, only: [:show, :edit, :update, :destroy, :details_candidatures]
 
   def index
+    skip_authorization
     @missions = policy_scope(Mission).order(created_at: :desc)
   end
 
   def new
     @mission = Mission.new
-
     authorize @mission
   end
 
@@ -23,7 +24,7 @@ class MissionsController < ApplicationController
   end
 
   def show
-    authorize @mission
+    skip_authorization
     # @mission = Mission.find(params[:id])
   end
 
