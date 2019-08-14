@@ -52,10 +52,11 @@ class MissionsController < ApplicationController
   def mission_params
     # *Strong params*: You need to *whitelist* what can be updated by the user
     # Never trust user data!
-    params.require(:mission).permit(:description, :logo, :company, :headquarter, :num_of_days, :daily_price, :user_id, :title)
+    params.require(:mission).permit(:description, :logo, :photo, :company, :headquarter, :num_of_days, :daily_price, :user_id, :title)
   end
 
   def set_missions
     @mission = Mission.find(params[:id])
   end
 end
+
