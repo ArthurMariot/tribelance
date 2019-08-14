@@ -16,6 +16,7 @@ User.destroy_all
 
 puts 'Creating users...'
 
+louis_uguen = User.create!(email: "louis@wagon.org", password: "password", first_name: "Louis", last_name: "Uguen", remote_avatar_url: "https://miro.medium.com/max/3150/1*C5JPw2-h7by_aua85tnkUA.jpeg")
 kim_mullaney = User.create!(email: "kim.mullaney@zapier.co", password: "kimmullaney", first_name: "Kim", last_name: "Mullaney")
 keisha_washington = User.create!(email: "keisha.ashington@trello.co", password: "keishawashington", first_name: "Keisha", last_name: "Ashington")
 lynne_oldham = User.create!(email: "lynne_oldham@zoom.co", password: "lynneoldham", first_name: "Lynne", last_name: "oldham")
