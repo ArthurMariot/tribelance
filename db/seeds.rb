@@ -36,6 +36,7 @@ missions_attributes = [
     num_of_days:  150,
     daily_price: 600,
     user: kim_mullaney,
+
   },
   {
     company: "Zapier",
