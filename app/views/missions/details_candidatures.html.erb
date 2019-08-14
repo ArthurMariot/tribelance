@@ -1,11 +1,12 @@
-<h2>@mission.title</h2>
-
 <div class="candidatures">
+<h2> Applicants for the mission <%= @mission.title %> </h2>
+
+
   <% @candidatures.each do |candidature|  %>
 
     <div class="notification">
       <%= cl_image_tag @current_user.avatar, class: "avatar-large" %>
-      <img src=' <%= candidature.user.photo %>' class="avatar-large" />
+
       <div class="notification-content">
         <p> <strong> Mission: <%= @mission.title %> </strong> </p>
         <p> Applicant: <%= candidature.user.first_name %> <%= candidature.user.last_name %> </p>
@@ -19,3 +20,5 @@
     </div>
   <% end %>
 </div>
+
+

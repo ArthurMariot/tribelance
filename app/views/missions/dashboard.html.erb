@@ -1,12 +1,22 @@
+ <div class="container">
+    <div class="missions">
+      <% @missions.each do |mission| %>
 
+        <a href= "<%= details_candidatures_path(mission) %>" class="box">
+        <div class="card-mission">
 
-
-<% @missions.each do |mission| %>
-<div class="card-show">
-  <%= mission.title %> <br> <br>
-  <%= mission.description %> <br> <br>
-  <%= mission.num_of_days %> <br> <br>
-  <%= mission.daily_price %> <br> <br>
+          <div class="card-mission-img">
+            <%= cl_image_tag mission.photo, class: "logo-sm" %>
+          </div>
+          <div class="card-mission-title">
+            <h4> <%= mission.title %> </h4>
+          </div>
+          <div class="card-mission-info">
+            <p> <%= mission.daily_price %> $ </p>
+            <p> <%= mission.num_of_days %> days </p>
+          </div>
+        </div>
+        </a>
+      <% end %>
+    </div>
   </div>
-<% end %>
-
