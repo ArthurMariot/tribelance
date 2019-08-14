@@ -19,18 +19,25 @@ body {
 
 h1 {
  font-size: 50px;
+ text-shadow: 1px 2px #ff487e;
 }
+
 h2 {
- color: #1de3cf;
+ color: white;
  font-size: 28px;
  text-shadow: 1px 1px #ff487e;
  text-align: center;
 }
 
-h4 {
+h3 {
+ color: #1de3cf;
+ font-size: 24px;
+ text-align: center;
+}
+
+h4 a {
  color: #1de3cf;
  font-size: 28px;
  text-align: center;
  font-size: 16px;
 }
-
