@@ -53,10 +53,10 @@ class MissionsController < ApplicationController
     @candidatures = @mission.candidatures
   end
 
-  def details_candidatures
-    authorize @mission
-    @candidatures = @mission.candidatures
-  end
+  # def details_candidatures
+  #   authorize @mission
+  #   @candidatures = @mission.candidatures
+  # end
 
   private
 

@@ -5,6 +5,12 @@ class CandidaturesController < ApplicationController
     authorize @candidature
   end
 
+  def dashboard
+    skip_authorization
+    @candidatures = policy_scope(Candidature).where(user: current_user).order(created_at: :desc)
+    # raise
+  end
+
   def create
     @mission = Mission.find(params[:mission_id])
     @candidature = Candidature.new(candidature_params)
@@ -16,7 +22,7 @@ class CandidaturesController < ApplicationController
     @candidature.total_price = @candidature.num_of_days * @candidature.mission.daily_price
     authorize @mission
     if @candidature.save
-      redirect_to mission_candidatures_path(@mission_id)
+      redirect_to missions_path
     else
       render :new
     end
