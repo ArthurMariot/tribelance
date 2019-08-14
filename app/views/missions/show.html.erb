@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
 
 <div class="card-mission-show">
 
@@ -14,4 +14,28 @@
   <%= link_to "Apply", new_mission_candidature_path(@mission), class: "btn-blue"  %>
 </div>
 
-</div>
+</div> -->
+
+  <div class="container">
+    <div class="mission">
+      <div class="card-show">
+
+        <div class="card-mission-img">
+          <img src= "<%= @mission.logo %>" alt="" class="logo-lg">
+        </div>
+        <div class="card-mission-title-description">
+          <h2> <%= @mission.title %> </h2>
+        </div>
+        <div class="card-mission-info">
+          <p> <%= @mission.description %> </p>
+        </div>
+      </div>
+
+    <div class="card-show-gauche">
+      <p> Price: <%= @mission.daily_price %> $/day</p>
+      <p> Number of days: <%= @mission.num_of_days %> </p>
+      <p> Recruiter name: <%= @mission.user.first_name %> <%= @mission.user.last_name %> </p>
+    </div>
+    <%= link_to "Apply", new_mission_candidature_path(@mission), class: "btn-blue" %>
+    </div>
+  </div>
