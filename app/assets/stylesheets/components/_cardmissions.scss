@@ -7,11 +7,19 @@
   margin-top: 24px;
 }
 
+.box {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  box-sizing: border-box;
+  text-align: center;
+  min-height: 168px;
+}
+
 .card-mission {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: column;
-    box-sizing: border-box;
     text-align: center;
     border: 2px solid #a9d2f9;
     border-radius: 6px;
@@ -19,6 +27,7 @@
     min-height: 168px;
     padding: 24px 18px;
     margin-top: 10px;
+    flex-basis: 100%;
   }
 
 .card-mission-img {
