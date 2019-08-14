@@ -6,8 +6,8 @@ Rails.application.routes.draw do
     :details_candidatures
   end
   get 'missions/:id/details_candidatures', to: 'missions#details_candidatures', as: :details_candidatures
-  get 'dashboard', to: 'missions#dashboard'
-  get 'canditures', to: 'canditures#dashboard', as: :dashboard_candidatures
+  get 'dashboard', to: 'missions#dashboard', as: :missions_dashboard
+  get 'dashboard/candidatures', to: 'candidatures#dashboard', as: :dashboard_candidatures
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
