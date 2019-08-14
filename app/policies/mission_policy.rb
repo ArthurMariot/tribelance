@@ -24,4 +24,8 @@ class MissionPolicy < ApplicationPolicy
   def details_candidatures?
     record.user == user
   end
+
+  def dashboard?
+    true
+  end
 end
