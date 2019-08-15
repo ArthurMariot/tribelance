@@ -2,9 +2,6 @@
   <div class="title-applications">
   <h2>My applications</h2>
 </div>
-  <div class="form-color-center">
-    <%= cl_image_tag 'form-pink.png' %>
-  </div>
 
        <div class="ok-candidatures">
        <% @candidatures.each do |candidature|  %>
@@ -16,15 +13,17 @@
               <p> Job : <strong><%= candidature.mission.title %></strong> </p>
               <p> <small> Number of days : <%= candidature.num_of_days %> </small> </p>
               <p> <small> Salary : <%= candidature.total_price %> $ </small> </p>
-
            </div>
            <div class="candidature-actions">
-        <!--       <%   %> -->
-             <i class="fas fa-check-circle small"></i>
-            <!--  <%  %> -->
+            <%  if candidature.status == "accepted" %>
+              <i class="fas fa-check-circle small"></i>
+            <% elsif candidature.status == "pending" %>
+              <i class="fas fa-spinner"></i>
+            <% else %>
+              <i class="fas fa-times-circle"></i>
+            <% end %>
            </div>
          </div>
        <% end %>
-
 </div>
 

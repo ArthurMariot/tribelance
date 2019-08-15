@@ -57,9 +57,8 @@ h6 {
 }
 
 .logo-company-small {
-  width: 40px;
+  width: 55px;
+  max-height: 50px;
+  object-fit: contain;
 }
 
-.status-center {
-  margin: 10 30;
-}
