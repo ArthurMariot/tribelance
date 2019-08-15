@@ -5,8 +5,12 @@ class MissionPolicy < ApplicationPolicy
     end
   end
 
+  def index?
+    true
+  end
+
   def new?
-    create?
+    # create?
   end
 
   def create?

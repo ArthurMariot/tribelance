@@ -17,12 +17,13 @@ User.destroy_all
 puts 'Creating users...'
 
 
-louis_uguen = User.create!(email: "louis@wagon.or", password: "password", first_name: "Louis", last_name: "Uguen", remote_avatar_url: "https://dwj199mwkel52.cloudfront.net/assets/lewagon-logo-square-fe76916e1b923ade71e253ae6dc031d936e5e8eebac4e26b0fbac650ea6ee360.png")
-kim_mullaney = User.create!(email: "kim.mullaney@zapier.co", password: "kimmullaney", first_name: "Kim", last_name: "Mullaney")
-keisha_washington = User.create!(email: "keisha.ashington@trello.co", password: "keishawashington", first_name: "Keisha", last_name: "Ashington")
-lynne_oldham = User.create!(email: "lynne_oldham@zoom.co", password: "lynneoldham", first_name: "Lynne", last_name: "oldham")
-christine_tran = User.create!(email: "christine_tran@mozilla.co", password: "christinetran", first_name: "Christine", last_name: "Tran")
-edouard_uguen = User.create!(email: "edouard@mozilla.co", password: "christinetran", first_name: "Christine", last_name: "Tran")
+louis_uguen = User.create!(email: "louis@wagon.org", password: "password", first_name: "Louis", last_name: "Uguen", remote_avatar_url: "https://dwj199mwkel52.cloudfront.net/assets/lewagon-logo-square-fe76916e1b923ade71e253ae6dc031d936e5e8eebac4e26b0fbac650ea6ee360.png", linkedinurl:"https://www.linkedin.com/in/louisuguen")
+kim_mullaney = User.create!(email: "kim.mullaney@zapier.co", password: "kimmullaney", first_name: "Kim", last_name: "Mullaney", remote_avatar_url:"https://thispersondoesnotexist.com/image", linkedinurl:"https://www.linkedin.com/in/kim-mullaney-69306b6")
+keisha_washington = User.create!(email: "keisha.ashington@trello.co", password: "keishawashington", first_name: "Keisha", last_name: "Ashington", remote_avatar_url:"https://thispersondoesnotexist.com/image", linkedinurl:"https://www.linkedin.com/in/keishap31")
+lynne_oldham = User.create!(email: "lynne_oldham@zoom.co", password: "lynneoldham", first_name: "Lynne", last_name: "oldham", remote_avatar_url:"https://www.thispersondoesnotexist.com/image", linkedinurl:"https://www.linkedin.com/in/lynneoldham")
+christine_tran = User.create!(email: "christine_tran@mozilla.co", password: "christinetran", first_name: "Christine", last_name: "Tran", remote_avatar_url:"https://www.thispersondoesnotexist.com/image", linkedinurl:"https://www.linkedin.com/in/christinentran")
+
+
 
 puts 'Finished users!'
 puts User.all

@@ -7,4 +7,8 @@ class Mission < ApplicationRecord
   validates :daily_price, presence: true, numericality: { greater_than: 0, only_integer: true }
   validates :num_of_days, presence: true, numericality: { greater_than: 0, only_integer: true }
   mount_uploader :photo, PhotoUploader
+
+  include PgSearch::Model
+  pg_search_scope :search_by_title_company_and_description,
+    against: [:title, :company, :description], using: { tsearch: { prefix: true } }
 end

@@ -4,7 +4,11 @@ class MissionsController < ApplicationController
 
   def index
     skip_authorization
-    @missions = policy_scope(Mission).order(created_at: :desc)
+    if params[:query].present?
+      @missions = policy_scope(Mission).search_by_title_company_and_description(params[:query])
+    else
+      @missions = policy_scope(Mission).order(created_at: :desc)
+    end
   end
 
   def dashboard
@@ -67,7 +71,7 @@ class MissionsController < ApplicationController
   def mission_params
     # *Strong params*: You need to *whitelist* what can be updated by the user
     # Never trust user data!
-    params.require(:mission).permit(:description, :logo, :photo, :company, :headquarter, :num_of_days, :daily_price, :user_id, :title)
+    params.require(:mission).permit(:description, :logo, :photo, :company, :headquarter, :num_of_days, :daily_price, :user_id, :title, :query)
   end
 
   def set_missions

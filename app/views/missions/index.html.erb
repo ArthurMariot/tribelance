@@ -1,26 +1,32 @@
-
-  <div class="container">
-    <div class="missions">
-      <% @missions.each do |mission| %>
-      <a href= "<%= mission_path(mission)%>" class="box">
-
-        <div class="card-mission">
-
-          <div class="card-mission-img">
-            <%= cl_image_tag mission.photo, class: "logo-sm" %>
-          </div>
-          <div class="card-mission-title">
-            <h4> <%= mission.title %> </h4>
-          </div>
-          <div class="card-mission-info">
-            <p> <%= mission.daily_price %> $ </p>
-            <p> <%= mission.num_of_days %> days </p>
-          </div>
+<div class="container">
+  <br>
+    <form novalidate="novalidate" class="simple_form search" id="sticky" action="<%= missions_path %>" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+        <div class="search-form-control form-group">
+            <input class="form-control string required" type="text" name="query" id="query" placeholder="Enter a company, a job, a skills..." />
+            <button name="commit" value="Search" type="submit" class="btn-flat">
+                <i class="fas fa-search"></i> Search
+            </button>
         </div>
+    </form>
 
-      </a>
-      <% end %>
+    <div class="missions">
+        <% @missions.each do |mission| %>
+        <a href="<%= mission_path(mission)%>" class="box">
+            <div class="card-mission">
+                <div class="card-mission-img">
+                    <%= cl_image_tag mission.photo, class: "logo-sm" %>
+                </div>
+                <div class="card-mission-title">
+                    <h4>
+                        <%= mission.title %>
+                    </h4>
+                </div>
+                <div class="card-mission-info">
+                    <p> <i class="fas fa-money-bill-alt"></i> <%= mission.daily_price %> $ </p>
+                    <p> <i class="fas fa-calendar-alt"></i> <%= mission.num_of_days %> days </p>
+                </div>
+            </div>
+        </a>
+        <% end %>
     </div>
-
-  </div>
-
+</div>
