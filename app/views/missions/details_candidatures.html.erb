@@ -1,4 +1,7 @@
 <div class="container">
+  <div class="card-title-pending">
+  <p>Pending applications</p>
+  </div>
   <div class="candidatures-dashboard">
 
     <div class="validates-candidatures">
@@ -10,9 +13,13 @@
           <h4> <%= @mission.title %> </h4>
         </div>
         <div class="card-mission-info">
-          <p> <%= @mission.daily_price %> $ </p>
-          <p> <%= @mission.num_of_days %> days </p>
+          <p> <i class="fas fa-money-bill-alt"></i> <%= @mission.daily_price %> $ </p>
+          <p> <i class="fas fa-calendar-alt"></i> <%= @mission.num_of_days %> days </p>
         </div>
+      </div>
+
+      <div class="card-title-approved">
+        <p>Approved applications</p>
       </div>
 
      <div class="ok-candidatures">
@@ -21,7 +28,7 @@
            <%= cl_image_tag candidature.user.avatar, class: "avatar" %>
            <div class="candidature-content">
               <p> Applicant: <%= candidature.user.first_name %> <%= candidature.user.last_name %>  </p>
-              <p> Dates: <%= candidature.start_date %> - <%= candidature.end_date %> </p>
+              <p> <small> <%= to_date(candidature.start_date) %> - <%= to_date(candidature.end_date) %> </small> </p>
            </div>
            <div class="candidature-actions">
              <i class="fas fa-check-circle small"></i>
@@ -32,7 +39,6 @@
 
     </div>
 
-
     <div class="pending-candidatures">
        <% @candidatures.each do |candidature|  %>
          <div class="candidature">
@@ -40,7 +46,7 @@
            <div class="candidature-content">
              <p> Applicant: <strong><%= candidature.user.first_name %> <%= candidature.user.last_name %></strong>  <a href=" <%= candidature.user.linkedinurl %>", target="_blank"><i class="fab fa-linkedin"></i></a></p>
              <p> <small> <%= candidature.cover_letter.truncate(60, separator: /\s/) %> </small></p>
-             <p> <small> Availabilities: <%= candidature.start_date %> - <%= candidature.end_date %> </small> </p>
+             <p> <small> Availabilities: <%= to_date(candidature.start_date) %> - <%= to_date(candidature.end_date) %> </small> </p>
            </div>
            <div class="candidature-actions">
              <a href="#" ><i class="fas fa-check-circle"></i></a>
