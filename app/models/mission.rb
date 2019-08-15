@@ -1,5 +1,5 @@
 class Mission < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, dependent: :destroy
   has_many :candidatures
   validates :title, presence: true, length: { maximum: 40 }
   validates :description, presence: true, length: { minimum: 40 }

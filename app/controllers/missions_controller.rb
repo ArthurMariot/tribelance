@@ -53,6 +53,10 @@ class MissionsController < ApplicationController
     @candidatures = @mission.candidatures
   end
 
+  def candidatureupdate
+
+  end
+
   # def details_candidatures
   #   authorize @mission
   #   @candidatures = @mission.candidatures
@@ -70,4 +74,3 @@ class MissionsController < ApplicationController
     @mission = Mission.find(params[:id])
   end
 end
-

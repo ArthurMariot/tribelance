@@ -11,4 +11,8 @@ class CandidaturePolicy < ApplicationPolicy
   def create?
     true
   end
+
+  def update?
+    record.mission.user == user
+  end
 end

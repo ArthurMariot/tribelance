@@ -1,23 +1,21 @@
 <div class="candidatures">
-<h2> Applicants for the mission <%= @mission.title %> </h2>
-
-
+  <h2> Applicants for the mission <%= @mission.title %> </h2>
   <% @candidatures.each do |candidature|  %>
-
-    <div class="notification">
-      <%= cl_image_tag candidature.user.avatar, class: "avatar-large" %>
-
-      <div class="notification-content">
-        <p> <strong> Mission: <%= @mission.title %> </strong> </p>
-        <p> Applicant: <%= candidature.user.first_name %> <%= candidature.user.last_name %> </p>
-        <p> <small> <%= candidature.cover_letter.truncate(40, separator: /\s/) %> </small></p>
-      </div>
-
-      <div class="notification-actions">
-        <a href="#" class="btn btn-success">Validate</a>
-        <a href="#" class="btn btn-danger">Decline</a>
-      </div>
+  <div class="notification">
+    <%= cl_image_tag candidature.user.avatar, class: "avatar-large" %>
+    <div class="notification-content">
+      <%= candidature.id %>
+      <p> <strong> Mission: <%= @mission.title %> </strong> </p>
+      <p> Applicant: <%= candidature.user.first_name %> <%= candidature.user.last_name %> </p>
+      <p> <small> <%= candidature.cover_letter.truncate(40, separator: /\s/) %> </small></p>
     </div>
+    <div class="notification-actions">
+      <%= simple_form_for([@mission, candidature], method: :patch) do |f| %>
+       <%= f.input :status, as: :radio_buttons %>
+      <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
   <% end %>
 </div>
 
