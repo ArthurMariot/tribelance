@@ -10,7 +10,7 @@ class MissionPolicy < ApplicationPolicy
   end
 
   def new?
-    # create?
+    create?
   end
 
   def create?
