@@ -18,7 +18,6 @@
     min-height: 168px;
     padding: 24px 18px;
     margin-top: 28px;
-    margin-bottom: 28px;
   }
 
 .logo-lg {
@@ -28,12 +27,25 @@
   max-width: 300px;
 }
 
+.btn-blue-padding {
+  border: 1px solid blue;
+  padding: 12px 20px;
+  color: blue;
+  border-radius: 50px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 28px;
+}
+
+.btn-blue-padding:hover {
+  opacity: 0.6;
+}
+
 .card-show-gauche {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     box-sizing: border-box;
-    text-align: center;
     border: 2px solid #a9d2f9;
     border-radius: 6px;
     background-color: #fff;
@@ -41,5 +53,27 @@
     padding: 24px 18px;
     margin-top: 28px;
   }
+
+.card-show-gauche-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding-left: 24px;
+}
+
+.card-show-gauche-info .info {
+  padding: 22px 0;
+}
+
+.card-show-gauche-info .fas {
+  color: #1AE3CF;
+}
+
+.info i {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+
 
 

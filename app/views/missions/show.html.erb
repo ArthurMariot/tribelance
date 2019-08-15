@@ -15,11 +15,21 @@
 
     <div class="card-show-gauche">
       <h3>About the mission:</h3>
-      <p> Price: <%= @mission.daily_price %> $/day</p>
-      <p> Number of days: <%= @mission.num_of_days %> </p>
-      <p> Headquarter location: <%= @mission.headquarter %> </p>
-      <p> Recruiter name: <%= @mission.user.first_name %> <%= @mission.user.last_name %> </p>
-    </div>
-    <%= link_to "Apply", new_mission_candidature_path(@mission), class: "btn-blue" %>
+        <div class="card-show-gauche-info">
+          <div class="info">
+            <i class="fas fa-money-bill-alt"></i> <%= @mission.daily_price %> $/day
+          </div>
+          <div class="info">
+            <i class="fas fa-calendar-alt"></i> <%= @mission.num_of_days %> days
+          </div>
+          <div class="info">
+            <i class="fas fa-map-marker-alt"> </i> Headquarter: <%= @mission.headquarter %>
+          </div>
+          <div class="info">
+            <i class="fas fa-user"></i> Recruiter name: <%= @mission.user.first_name %> <%= @mission.user.last_name %>
+          </div>
+        </div>
+      </div>
+    <%= link_to "Apply", new_mission_candidature_path(@mission), class: "btn-blue-padding" %>
     </div>
 </div>
