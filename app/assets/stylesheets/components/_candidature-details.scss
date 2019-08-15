@@ -1,47 +1,122 @@
-.candidatures {
-  margin-top: 30px;
+.candidatures-dashboard {
+  margin-top: 52px;
+  display: grid;
+  grid-template-columns: 30% auto;
+  grid-column-gap: 24px;
 }
 
-.notification {
+.candidatures-dashboard h2 {
+  margin-bottom: 30px;
+}
+
+.candidature {
   display: flex;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   background: white;
   padding: 8px 16px;
-  border: 1px solid rgb(235,235,235);
+  border: 2px solid #a9d2f9;
+  border-radius: 6px;
+  background-color: #fff;
 }
 
-.notification .notification-content {
+.card-mission-title h4 {
+  color: blue;
+}
+
+.candidature .candidature-content {
   flex-grow: 1;
   padding: 0 24px;
 }
 
-.notification p {
+.candidature p {
   margin: 0;
   line-height: 1.4;
 }
 
-.notification small {
+.candidature small {
   color: #999999;
   font-weight: bold;
 }
 
-.notification:hover .notification-actions {
+.fa-linkedin {
+  color: #999999;
+  font-size: 18px;
+}
+
+.candidature:hover .candidature-actions {
   opacity: 1;
 }
 
-.notification .notification-actions a {
-  color: #999999;
+.candidature .candidature-actions a {
+  color: white;
   margin-left: 16px;
   font-size: 14px;
 }
 
-.notification .notification-actions a:hover {
-  color: #555555;
+.candidature .candidature-actions a:hover {
+  color: white;
 }
 
-// .notification .notification-actions {
-//   opacity: 0;
-//   display: flex;
-//   transition: ease .3s;
-// }
+.candidature .fa-check-circle {
+  color: #38F1E2;
+  font-size: 32px;
+}
+
+.candidature .fa-times-circle {
+  color: #FD080C;
+  font-size: 32px;
+}
+
+
+/////////////////////////////////////////////////////////
+
+
+.ok-candidatures {
+  margin-top: 24px;
+}
+
+.ok-candidature {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  background: white;
+  padding: 8px 16px;
+  border: 2px solid #a9d2f9;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+.ok-candidature .candidature-content {
+  flex-grow: 1;
+  padding: 0 24px;
+}
+
+.ok-candidature p {
+  margin: 0;
+  font-size: 14px;
+}
+
+c small {
+  color: #999999;
+  font-weight: bold;
+}
+
+.ok-candidature:hover .candidature-actions {
+  opacity: 1;
+}
+
+.ok-candidature .candidature-actions a {
+  color: white;
+  margin-left: 16px;
+  font-size: 14px;
+}
+
+.ok-candidature .candidature-actions a:hover {
+  color: white;
+}
+
+.ok-candidature .fa-check-circle {
+  color: #38F1E2;
+  font-size: 24px;
+}
