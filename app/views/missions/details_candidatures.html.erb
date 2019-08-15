@@ -1,64 +1,62 @@
 <div class="container">
-  <div class="card-title-pending">
-  <p>Pending applications</p>
-  </div>
-  <div class="candidatures-dashboard">
-
-    <div class="validates-candidatures">
-      <div class="card-mission">
-        <div class="card-mission-img">
-          <%= cl_image_tag @mission.photo, class: "logo-sm" %>
+ <div class="card-title-pending">
+ <p>Pending applications</p>
+ </div>
+ <div class="candidatures-dashboard">
+   <div class="validates-candidatures">
+     <div class="card-mission">
+       <div class="card-mission-img">
+         <%= cl_image_tag @mission.photo, class: "logo-sm" %>
+       </div>
+       <div class="card-mission-title">
+         <h4> <%= @mission.title %> </h4>
+       </div>
+       <div class="card-mission-info">
+         <p> <i class="fas fa-money-bill-alt"></i> <%= @mission.daily_price %> $ </p>
+         <p> <i class="fas fa-calendar-alt"></i> <%= @mission.num_of_days %> days </p>
+       </div>
+     </div>
+     <div class="card-title-approved">
+       <p>Approved applications</p>
+     </div>
+    <div class="ok-candidatures">
+      <% @candidatures.each do |candidature|  %>
+       <% if candidature.status == "accepted" %>
+        <div class="ok-candidature">
+          <%= cl_image_tag candidature.user.avatar, class: "avatar" %>
+          <div class="candidature-content">
+             <p> Applicant: <%= candidature.user.first_name %> <%= candidature.user.last_name %>  </p>
+             <p> <small> <%= to_date(candidature.start_date) %> - <%= to_date(candidature.end_date) %> </small> </p>
+          </div>
+          <div class="candidature-actions">
+            <i class="fas fa-check-circle small"></i>
+          </div>
         </div>
-        <div class="card-mission-title">
-          <h4> <%= @mission.title %> </h4>
-        </div>
-        <div class="card-mission-info">
-          <p> <i class="fas fa-money-bill-alt"></i> <%= @mission.daily_price %> $ </p>
-          <p> <i class="fas fa-calendar-alt"></i> <%= @mission.num_of_days %> days </p>
-        </div>
-      </div>
-
-      <div class="card-title-approved">
-        <p>Approved applications</p>
-      </div>
-
-     <div class="ok-candidatures">
-       <% @candidatures.each do |candidature|  %>
-         <div class="ok-candidature">
-           <%= cl_image_tag candidature.user.avatar, class: "avatar" %>
-           <div class="candidature-content">
-              <p> Applicant: <%= candidature.user.first_name %> <%= candidature.user.last_name %>  </p>
-              <p> <small> <%= to_date(candidature.start_date) %> - <%= to_date(candidature.end_date) %> </small> </p>
-           </div>
-           <div class="candidature-actions">
-             <i class="fas fa-check-circle small"></i>
-           </div>
-         </div>
-       <% end %>
-    </div>
-    </div>
-
-    <div class="pending-candidatures">
-       <% @candidatures.each do |candidature|  %>
-         <div class="candidature">
-           <%= cl_image_tag candidature.user.avatar, class: "avatar-large" %>
-           <div class="candidature-content">
-             <p> Applicant: <strong><%= candidature.user.first_name %> <%= candidature.user.last_name %></strong>  <a href=" <%= candidature.user.linkedinurl %>", target="_blank"><i class="fab fa-linkedin"></i></a></p>
-             <p> <small> <%= candidature.cover_letter.truncate(60, separator: /\s/) %> </small></p>
-             <p> <small> Availabilities: <%= to_date(candidature.start_date) %> - <%= to_date(candidature.end_date) %> </small> </p>
-           </div>
-           <div class="candidature-actions">
-             <a href="#" ><i class="fas fa-check-circle"></i></a>
-             <a href="#" ><i class="fas fa-times-circle"></i></a>
-                 <div class="notification-actions">
-            <%= simple_form_for([@mission, candidature], method: :patch) do |f| %>
-             <%= f.input :status, as: :radio_buttons %>
-            <%= f.submit %>
-            <% end %>
-    </div>
-           </div>
-         </div>
-       <% end %>
-    </div>
-  </div>
+      <% end %>
+      <% end %>
+   </div>
+   </div>
+   <div class="pending-candidatures">
+      <% @candidatures.each do |candidature|  %>
+        <% if candidature.status == "pending" %>
+          <div class="candidature">
+            <%= cl_image_tag candidature.user.avatar, class: "avatar-large" %>
+            <div class="candidature-content">
+              <p> Applicant: <strong><%= candidature.user.first_name %> <%= candidature.user.last_name %></strong>  <a href=" <%= candidature.user.linkedinurl %>", target="_blank"><i class="fab fa-linkedin"></i></a></p>
+              <p> <small> <%= candidature.cover_letter.truncate(60, separator: /\s/) %> </small></p>
+              <p> <small> Availabilities: <%= to_date(candidature.start_date) %> - <%= to_date(candidature.end_date) %> </small> </p>
+            </div>
+            <div class="candidature-actions">
+              <%= link_to mission_candidature_path(@mission, candidature, candidature: { status: "true" }), method: :patch do %>
+                <i class="fas fa-check-circle"></i>
+              <% end %>
+              <%= link_to mission_candidature_path(@mission, candidature, candidature: { status: "false" }), method: :patch do %>
+                <i class="fas fa-times-circle"></i>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+   </div>
+ </div>
 </div>
