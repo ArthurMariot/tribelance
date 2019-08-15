@@ -36,7 +36,6 @@
          </div>
        <% end %>
     </div>
-
     </div>
 
     <div class="pending-candidatures">
@@ -51,6 +50,12 @@
            <div class="candidature-actions">
              <a href="#" ><i class="fas fa-check-circle"></i></a>
              <a href="#" ><i class="fas fa-times-circle"></i></a>
+                 <div class="notification-actions">
+            <%= simple_form_for([@mission, candidature], method: :patch) do |f| %>
+             <%= f.input :status, as: :radio_buttons %>
+            <%= f.submit %>
+            <% end %>
+    </div>
            </div>
          </div>
        <% end %>

@@ -24,6 +24,7 @@ lynne_oldham = User.create!(email: "lynne_oldham@zoom.co", password: "lynneoldha
 christine_tran = User.create!(email: "christine_tran@mozilla.co", password: "christinetran", first_name: "Christine", last_name: "Tran", remote_avatar_url:"https://www.thispersondoesnotexist.com/image", linkedinurl:"https://www.linkedin.com/in/christinentran")
 
 
+
 puts 'Finished users!'
 puts User.all
 
