@@ -1,5 +1,20 @@
+.card-title-pending {
+  margin-top: 32px;
+  position: relative;
+  right: -357px;
+  color: #8897E6;
+}
+
+.card-title-approved {
+  position: relative;
+  top: 18px;
+  right: -3px;
+  color: #8897E6;
+}
+
+
 .candidatures-dashboard {
-  margin-top: 52px;
+  margin-top: -3px;
   display: grid;
   grid-template-columns: 30% auto;
   grid-column-gap: 24px;
