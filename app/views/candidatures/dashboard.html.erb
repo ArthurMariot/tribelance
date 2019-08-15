@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="title-applications">
+  <h2>My applications</h2>
+</div>
+  <div class="form-color-center">
+    <%= cl_image_tag 'form-pink.png' %>
+  </div>
+
+       <div class="ok-candidatures">
+       <% @candidatures.each do |candidature|  %>
+         <div class="ok-candidature">
+           <%= cl_image_tag candidature.mission.photo, class: "logo-company-small" %>
+           <div class="candidature-content">
+
+              <p> <h6> <%= candidature.mission.company %> </h6> </p>
+              <p> Job : <strong><%= candidature.mission.title %></strong> </p>
+              <p> <small> Number of days : <%= candidature.num_of_days %> </small> </p>
+              <p> <small> Salary : <%= candidature.total_price %> $ </small> </p>
+
+           </div>
+           <div class="candidature-actions">
+        <!--       <%   %> -->
+             <i class="fas fa-check-circle small"></i>
+            <!--  <%  %> -->
+           </div>
+         </div>
+       <% end %>
+
+</div>
+
