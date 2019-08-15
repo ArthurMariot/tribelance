@@ -1,5 +1,5 @@
 module ApplicationHelper
   def to_date(date)
-    date.strftime("%B %e, %Y")
+    date.strftime("%d/%m/%Y")
   end
 end
