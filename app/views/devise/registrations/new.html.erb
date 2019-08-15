@@ -10,7 +10,8 @@
      <%= f.input :last_name,
                  required: true,
                  input_html: { autocomplete: "last_name" }%>
-     <%= f.input :avatar %>
+     <%= f.input :avatar, label:"Profile picture"  %>
+     <%= f.input :linkedinurl, label:"LinkedIn url" %>
      <%= f.input :email,
                  required: true,
                  input_html: { autocomplete: "email" }%>
