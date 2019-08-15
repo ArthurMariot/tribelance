@@ -37,7 +37,7 @@
    </div>
    </div>
    <div class="pending-candidatures">
-    <% if @candidature.nil? %>
+    <% if @candidatures.where(status: "pending").count < 1 %>
          <p id="no-candidates"> <%= "No candidature to valide !"  %> </p>
       <% else %>
       <% @candidatures.each do |candidature|  %>
