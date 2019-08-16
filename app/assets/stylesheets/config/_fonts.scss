@@ -3,7 +3,8 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
 @font-face {
-src: font-url('/../fonts/Cocogoose_trial.otf');
+  // src: font-url('/../fonts/Cocogoose_trial.otf');
+  src:url(asset_path("Cocogoose_trial.otf"));
 }
 // Define fonts for body and headers
 $body-font: "Open Sans", "Roboto", "sans-serif";
