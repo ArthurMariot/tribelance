@@ -22,7 +22,7 @@ class CandidaturesController < ApplicationController
     @candidature.total_price = @candidature.num_of_days * @candidature.mission.daily_price
     authorize @mission
     if @candidature.save
-      redirect_to missions_path
+      redirect_to dashboard_candidatures_path
     else
       render :new
     end
