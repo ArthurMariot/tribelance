@@ -13,8 +13,8 @@
          <h4> <%= @mission.title %> </h4>
        </div>
        <div class="card-mission-info">
-         <p> <i class="fas fa-money-bill-alt"></i> <%= @mission.daily_price %> $ </p>
-         <p> <i class="fas fa-calendar-alt"></i> <%= @mission.num_of_days %> days </p>
+         <p> <i class="fas fa-money-bill-alt"></i> <%= @mission.candidatures.where(status: "accepted").sum(:total_price) %> / <%= @mission.daily_price * @mission.num_of_days %> $ </p>
+         <p> <i class="fas fa-calendar-alt"></i> <%= @mission.candidatures.where(status: "accepted").sum(:num_of_days) %> / <%= @mission.num_of_days %> days </p>
        </div>
      </div>
      <div class="card-title-approved">
