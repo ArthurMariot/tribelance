@@ -15,9 +15,9 @@
               <p> <small> Salary : <%= candidature.total_price %> $ </small> </p>
            </div>
            <div class="candidature-actions">
-            <% if candidature.status == "accepted" %> <p> Statue: <i class="fas fa-check-circle small"></i> (validated) </p>
-            <% elsif candidature.status == "pending" %> <p> Statue: <i class="fas fa-spinner"></i> (pending) </p>
-            <% else %>  <p> Statue: <i class="fas fa-times-circle"></i> (declined) </p>
+            <% if candidature.status == "accepted" %> <p> Status: <i class="fas fa-check-circle small"></i> (validated) </p>
+            <% elsif candidature.status == "pending" %> <p> Status: <i class="fas fa-spinner"></i> (pending) </p>
+            <% else %>  <p> Status: <i class="fas fa-times-circle"></i> (declined) </p>
             <% end %>
            </div>
          </div>
