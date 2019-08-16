@@ -20,18 +20,21 @@ body {
 h1 {
  font-size: 50px;
  text-shadow: 2px 3px #ff487e;
+ font-weight: 600;
 }
 
 h2 {
  color: blue;
  font-size: 28px;
  text-align: center;
+ font-weight: 700;
 }
 
 h3 {
  color: #1de3cf;
  font-size: 24px;
  text-align: center;
+ font-weight: 700;
 }
 
 h5 {
@@ -39,6 +42,11 @@ color: white;
  font-size: 28px;
  text-align: center;
  text-shadow: 1px 2px #ff487e;
+ font-weight: 700;
+}
+
+h4 {
+  font-weight: 600;
 }
 
 
@@ -47,8 +55,10 @@ h4 a {
  font-size: 28px;
  text-align: center;
  font-size: 16px;
+ font-weight: 700;
 }
 
 h6 {
-  color: #1de3cf
+  color: #1de3cf;
+  font-weight: 700;
 }

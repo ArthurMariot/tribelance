@@ -1,6 +1,7 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600,700,800&display=swap');
 
 @font-face {
   src: font-url('/../fonts/Cocogoose_trial.otf');
@@ -8,7 +9,7 @@
 }
 // Define fonts for body and headers
 $body-font: "Open Sans", "Roboto", "sans-serif";
-$headers-font: "Cocogoose", "regular";
+$headers-font: "Poppins", "sans-serif";
 
 // To use a font file (.woff) uncomment following lines
 
