@@ -2,6 +2,7 @@
   justify-content: space-between;
   color: blue;
   margin-bottom: 40px;
+  z-index: 2;
 }
 
 #navbar-white {
@@ -16,7 +17,7 @@
   width: 120px;
 }
 
-.btn-blue {
+.btn-blue-navbar {
   color: blue;
   border: 1px solid blue;
   padding: 8px 28px;

@@ -11,12 +11,19 @@
         <a href="<%= missions_path %>">Find a mission</a>
         <a href="<%= new_mission_path %>">Find a freelance</a>
         <% if current_user.nil? %>
-        <a class="btn-blue" href="<%= new_user_session_path %>">Login</a>
+          <a class="btn-blue-navbar" href="<%= new_user_session_path %>">Login</a>
         <% else %>
-        <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="<%= current_user.avatar %>" />
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="<%= missions_dashboard_path%>">My dashboard</a>
-          <a class="dropdown-item" href="<%= dashboard_candidatures_path %>">My applications</a>
+          <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="<%= current_user.avatar %>" />
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <% if current_user.missions.first.nil? %>
+            <% else %>
+            <a class="dropdown-item" href="<%= missions_dashboard_path%>"> <%= "My dashboard" %></a>
+            <% end %>
+            <% if current_user.candidatures.first.nil? %>
+            <% else %>
+            <a class="dropdown-item" href="<%= dashboard_candidatures_path %>"> <%= "My applications" %>
+              <% end %>
+          </a>
           <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "dropdown-item") %>
         </div>
         <% end %>
