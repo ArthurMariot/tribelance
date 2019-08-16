@@ -1,5 +1,5 @@
 import "bootstrap";
 import "../plugins/flatpickr";
-import { btn_see_more } from '../components/modal';
+// import { btn_see_more } from '../components/modal';
 
-btn_see_more();
+// btn_see_more();
