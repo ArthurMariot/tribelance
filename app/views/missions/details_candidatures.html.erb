@@ -1,6 +1,7 @@
 <div class="container">
+
  <div class="card-title-pending">
- <p>Pending applications</p>
+ <p>Pending applications ( <%= @candidatures.where(status: "pending").count %> )</p>
  </div>
  <div class="candidatures-dashboard">
    <div class="validates-candidatures">
@@ -17,7 +18,7 @@
        </div>
      </div>
      <div class="card-title-approved">
-       <p>Approved applications</p>
+       <p>Approved applications ( <%= @candidatures.where(status: "accepted").count %> )</p>
      </div>
     <div class="ok-candidatures">
       <% @candidatures.each do |candidature|  %>
@@ -46,7 +47,24 @@
             <%= cl_image_tag candidature.user.avatar, class: "avatar-large" %>
             <div class="candidature-content">
               <p> Applicant: <strong><%= candidature.user.first_name %> <%= candidature.user.last_name %></strong>  <a href=" <%= candidature.user.linkedinurl %>", target="_blank"><i class="fab fa-linkedin"></i></a></p>
-              <p> <small> <%= candidature.cover_letter.truncate(60, separator: /\s/) %> </small></p>
+              <p> <small> <%= candidature.cover_letter.truncate(60, separator: /\s/) %> </small> <button type="button" class="btn-read-more" data-toggle="modal" data-target="#exampleModal">Read more</button> </p>
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h3 class="modal-title" id="exampleModalLabel">Cover letter</h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <p> <%= candidature.cover_letter %> </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
               <p> <small> Availabilities: <%= to_date(candidature.start_date) %> - <%= to_date(candidature.end_date) %> </small> </p>
             </div>
             <div class="candidature-actions">
@@ -63,4 +81,8 @@
     <% end %>
    </div>
  </div>
+
+<!-- Modal -->
+
+
 </div>
