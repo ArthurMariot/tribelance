@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Details of the cover letter</title>
+
+   <div class="pending-candidatures">
+      <% @candidatures.each do |candidature|  %>
+          <div class="candidature">
+            <%= cl_image_tag candidature.user.avatar, class: "avatar-large" %>
+            <div class="candidature-content">
+              <p> <small> <%= candidature.cover_letter%> </small></p>
+            </div>
+          </div>
+      <% end %>
+   </div>
+  <style>
+      .gfg {
+        text-align:center;
+        font-size:40px;
+        font-weight:bold;
+        color:green;
+      }
+    </style>
+    <script>
+      function myFunction() {
+        window.open('https://www.geeksforgeeks.org',
+              ' ', 'width=500, height=300');
+      }
+    </script>
+  </head>
+  <body>
+    <div class = "gfg" onmouseover = "myFunction()">
+      GeeksforGeeks
+    </div>
+  </body>
+</html>
