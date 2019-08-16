@@ -29,14 +29,14 @@ arthur = User.create!(email: "arthur@slack.com", password: "password", first_nam
 
 
 louis = User.create!(email: "louis@example.com", password: "password", first_name: "Louis", last_name: "Uguen", remote_avatar_url:"https://ibb.co/z5yQyBj", linkedinurl:"https://fr.linkedin.com/in/louisuguen")
-ramzi = User.create!(email: "ramzi@example.com", password: "password", first_name: "Ramzi", last_name: "Saidani", remote_avatar_url:"https://ibb.co/njkWrV1", linkedinurl:"https://fr.linkedin.com/in/ramzisaidani")
-edouard = User.create!(email: "edouard@example.com", password: "password", first_name: "Edouard", last_name: "Uguen", remote_avatar_url:"https://ibb.co/njkWrV1", linkedinurl:"https://fr.linkedin.com/in/edouarduguen")
-julien = User.create!(email: "julien@example.com", password: "password", first_name: "Julien", last_name: "Legay", remote_avatar_url:"https://ibb.co/njkWrV1", linkedinurl:"https://www.linkedin.com/in/julien-legay-a116ba181")
-theau = User.create!(email: "theau@example.com", password: "password", first_name: "Theau", last_name: "Bruno", remote_avatar_url:"https://ibb.co/njkWrV1", linkedinurl:"https://www.linkedin.com/in/13974")
-bertrand = User.create!(email: "bertrand@example.com", password: "password", first_name: "Bertrand", last_name: "Bussac", remote_avatar_url:"https://ibb.co/njkWrV1", linkedinurl:"https://fr.linkedin.com/in/bertrand-bussac-4185034a?trk=public_profile_browsemap_profile-result-card_result-card_full-click")
-tarik = User.create!(email: "tarik@example.com", password: "password", first_name: "Tarik", last_name: "Graoui", remote_avatar_url:"https://ibb.co/njkWrV1", linkedinurl:"https://fr.linkedin.com/in/tarik-graoui")
-james = User.create!(email: "james@example.com", password: "password", first_name: "James", last_name: "Arbacette", remote_avatar_url:"https://ibb.co/njkWrV1", linkedinurl:"https://fr.linkedin.com/in/james-arbacette")
-claudine = User.create!(email: "claudine@example.com", password: "password", first_name: "Claudine", last_name: "Pradal", remote_avatar_url:"https://ibb.co/njkWrV1", linkedinurl:"https://fr.linkedin.com/in/claudine-pradal-aaa35575")
+ramzi = User.create!(email: "ramzi@example.com", password: "password", first_name: "Ramzi", last_name: "Saidani", remote_avatar_url:"https://www.thispersondoesnotexist.com/image", linkedinurl:"https://fr.linkedin.com/in/ramzisaidani")
+edouard = User.create!(email: "edouard@example.com", password: "password", first_name: "Edouard", last_name: "Uguen", remote_avatar_url:"https://www.thispersondoesnotexist.com/image", linkedinurl:"https://fr.linkedin.com/in/edouarduguen")
+julien = User.create!(email: "julien@example.com", password: "password", first_name: "Julien", last_name: "Legay", remote_avatar_url:"https://www.thispersondoesnotexist.com/image", linkedinurl:"https://www.linkedin.com/in/julien-legay-a116ba181")
+theau = User.create!(email: "theau@example.com", password: "password", first_name: "Theau", last_name: "Bruno", remote_avatar_url:"https://www.thispersondoesnotexist.com/image", linkedinurl:"https://www.linkedin.com/in/13974")
+bertrand = User.create!(email: "bertrand@example.com", password: "password", first_name: "Bertrand", last_name: "Bussac", remote_avatar_url:"https://www.thispersondoesnotexist.com/image", linkedinurl:"https://fr.linkedin.com/in/bertrand-bussac-4185034a?trk=public_profile_browsemap_profile-result-card_result-card_full-click")
+tarik = User.create!(email: "tarik@example.com", password: "password", first_name: "Tarik", last_name: "Graoui", remote_avatar_url:"https://www.thispersondoesnotexist.com/image", linkedinurl:"https://fr.linkedin.com/in/tarik-graoui")
+james = User.create!(email: "james@example.com", password: "password", first_name: "James", last_name: "Arbacette", remote_avatar_url:"https://www.thispersondoesnotexist.com/image", linkedinurl:"https://fr.linkedin.com/in/james-arbacette")
+claudine = User.create!(email: "claudine@example.com", password: "password", first_name: "Claudine", last_name: "Pradal", remote_avatar_url:"https://www.thispersondoesnotexist.com/image", linkedinurl:"https://fr.linkedin.com/in/claudine-pradal-aaa35575")
 
 
 
