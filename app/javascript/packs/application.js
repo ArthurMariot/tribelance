@@ -1,5 +1,6 @@
 import "bootstrap";
 import "../plugins/flatpickr";
+
 import Swal from 'sweetalert2';
 
 const apply = document.querySelector("#btn-apply");
@@ -16,4 +17,5 @@ if (apply) {
   });
   });
 }
+
 
